@@ -1,0 +1,234 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    letter-spacing: 3px;
+    font-family: 'silly', sans-serif;
+    overflow: hidden;
+}
+
+#goon {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#content-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+#roddybox {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.575);
+    padding: 50px;
+    border-radius: 15px;
+    border: 2.5px solid white;
+    box-sizing: border-box;
+}
+
+#pfp {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+
+a {
+    background-color: rgb(34, 34, 34);
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid white;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow:auto;
+    }
+    #roddybox {
+        padding: 30px;
+    }
+    #pfp {
+        max-width: 150px;
+        max-height: 150px;
+        border-width: 4px;
+    }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    p { font-size: 1em; }
+    a { padding: 8px; font-size: 0.9em; }
+}
+
+@media screen and (max-width: 480px) {
+    #roddybox { padding: 20px; margin: 20px auto; }
+    #pfp { max-width: 120px; max-height: 120px; border-width: 3px; }
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.2em; }
+    p { font-size: 0.9em; }
+    a { padding: 6px; font-size: 0.8em; }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.5s ease;
+}
+
+#animationText span {
+    opacity: 0;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+#musicPlayer {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 10px 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #fff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: 50;
+}
+
+#musicPlayer img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #fff;
+}
+
+#songInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100px;
+}
+
+#title { font-weight: 600; font-size: 0.9rem; }
+#artist { font-size: 0.7rem; color: #ccc; }
+
+#musicControls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#musicControls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 3px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#musicControls button:hover {
+    color: #ff69b4;
+    transform: scale(1.2);
+}
+
+#musicControls input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #555;
+    transition: background 0.2s ease;
+}
+
+#progress {
+    width: 120px;
+    background: linear-gradient(to right, #ff69b4 0%, #ff69b4 var(--progress, 0%), #555 var(--progress, 0%), #555 100%);
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ff69b4;
+    cursor: pointer;
+}
+#progress::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ff69b4;
+}
+
+#volume {
+    width: 80px;
+    background: linear-gradient(to right, #00ffcc 0%, #00ffcc var(--volume, 50%), #555 var(--volume, 50%), #555 100%);
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #00ffcc;
+}
+#volume::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #00ffcc;
+}
+
+#progressTime, #volumePercent {
+    min-width: 40px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
+@font-face {
+    font-family: silly;
+    src: url(/assets/fonts/Knicknack\ Regular.otf);
+}

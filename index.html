@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>✩ jules!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="goon"></div>
+
+<div id="overlay">
+  <div id="clickEnter">click to enter</div>
+  <div id="animationText" style="margin-top:20px; font-size:1.5rem;"></div>
+</div>
+
+<div id="content-wrapper">
+  <div id="roddybox">
+    <img src="/assets/images/jules.jpg" id="pfp">
+    <h1>✩ jules!</h1>
+    <p>she/they</p>
+    <p>hi! im jules, aka ihatedjuly</p>
+    <p>im a programmer and music artist</p>
+    <h2>social medias</h2>
+    <a href="https://tiktok.com/@ihatedjuly">tiktok</a>
+    <a href="https://discord.com/users/1408309755382071326">discord</a>
+    <a href="https://youtube.com/@ihatedjuly">youtube</a>
+    <a href="https://github.com/ihatedjuly">github</a>
+    <a onclick="music()">my music</a>
+    <h2>projects</h2>
+    <a href="https://montes.lol">montes.lol</a>
+    <a href="https://ily.july.wtf"><3</a>
+    <div class="badges">
+      <img src="https://anlucas.neocities.org/made_with_windows.gif" height="31">
+      <img src="https://anlucas.neocities.org/rararchiverlogo.gif" height="31">
+      <img src="https://88x31.kate.pet/source-poweredby-orange.png" height="31">
+      <img src="https://88x31.kate.pet/flag-trans.png" height="31"/>
+    </div>
+  </div>
+</div>
+
+<div id="musicPlayer">
+  <img id="cover" src="" alt="cover">
+  <div>
+    <div id="songInfo">
+      <div id="title"></div>
+      <div id="artist" style="font-size:0.8rem;"></div>
+    </div>
+    <div id="musicControls">
+      <button id="back">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
+      <input type="range" id="progress" min="0" max="100" value="0">
+      <span id="progressTime">0:00 / 0:00</span>
+      <input type="range" id="volume" min="0" max="1" step="0.01">
+      <span id="volumePercent">50%</span>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
+<script>
+VANTA.DOTS({
+  el: "#goon",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200,
+  minWidth: 200,
+  scale: 1,
+  scaleMobile: 1,
+  color: 0x6300be,
+  color2: 0x6307b6,
+  backgroundColor: 0x0
+})
+</script>
+
+<script>
+function music() {
+    alert('ihatedjuly on all platforms!!')
+    window.open('https://open.spotify.com/artist/2DcgqYwGMermZ4ZHlTbHmL')
+}
+</script>
+<script src="music.js"></script>
+</body>
+</html>

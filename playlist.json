@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Just Be Competent",
+    "artist": "russelbuck",
+    "coverurl": "/assets/images/songs/competent.jpeg",
+    "songurl": "/assets/songs/Just Be Competent.mp3"
+  },
+  {
+    "title": "Machine Love",
+    "artist": "Jamie Paige",
+    "coverurl": "/assets/images/songs/machine love.jpeg",
+    "songurl": "/assets/songs/Machine Love.mp3"
+  },
+  {
+    "title": "KATAMARI",
+    "artist": "femtanyl",
+    "coverurl": "/assets/images/songs/katamari.jpeg",
+    "songurl": "/assets/songs/KATAMARI.mp3"
+  },
+  {
+    "title": "メズマライザー",
+    "artist": "32ki",
+    "coverurl": "/assets/images/songs/メズマライザー.jpeg",
+    "songurl": "/assets/songs/メズマライザー.mp3"
+  },
+  {
+    "title": "webcore!",
+    "artist": "Kwite",
+    "coverurl": "/assets/images/songs/webcore.jpeg",
+    "songurl": "/assets/songs/webcore.mp3"
+  },
+  {
+    "title": "iwantu2know *:)",
+    "artist": "D4WN",
+    "coverurl": "/assets/images/songs/i want u 2 know.jpeg",
+    "songurl": "/assets/songs/iwantu2know.mp3"
+  },
+  {
+    "title": "BIRDBRAIN",
+    "artist": "Jamie Paige",
+    "coverurl": "/assets/images/songs/machine love.jpeg",
+    "songurl": "/assets/songs/BIRDBRAIN.mp3"
+  }
+]
